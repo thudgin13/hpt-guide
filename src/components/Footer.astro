@@ -1,0 +1,23 @@
+---
+import Social from './Social.astro'
+---
+<style>
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: .5rem;
+        margin-top: 2rem;
+    }
+    p {
+        margin: 0;
+    }
+</style>
+
+<footer>
+  <p>Made with 💚 by Traci Hudgin an EdD student at UWF!</p>
+  <span>
+    <Social platform="github"  slug={`/thudgin13`}/>
+    <Social platform="linkedin"  slug={`in/traciamanda`}/>
+  </span>
+</footer>

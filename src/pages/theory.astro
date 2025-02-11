@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import TheoryTableLayout from '../layouts/TheoryTableLayout.astro'
+const pageTitle = "HPT Theory Matrix"
+---
+<BaseLayout pageTitle={pageTitle}>
+    <div id="theoryTable">
+        <TheoryTableLayout tableName="all" />
+    </div>
+</BaseLayout>
+

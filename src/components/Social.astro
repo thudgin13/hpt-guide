@@ -1,0 +1,13 @@
+---
+const { platform, slug } = Astro.props;
+
+---
+<style>
+    img {
+        max-width: 30px;
+        max-height: 30px;
+    }
+</style>
+<a href={`https://www.${platform}.com/${slug}`} target="_blank">
+    <img  src=`/${platform}-icon.png` alt=`External Link to my ${platform} profile`/>
+</a>

@@ -1,0 +1,20 @@
+---
+import { DataTable } from 'webcoreui/astro'
+import headers from '../components/headers'
+const {tableName} = Astro.props
+let posts = Object.values(import.meta.glob('../pages/theory/**/*.md', { eager: true }));
+posts = tableName !== 'all' ? posts.filter((post: any) => post.frontmatter.categorySlug) : posts;
+const titles = headers.map((h: any) => h.name).filter((t: string) => t && t !== 'More');
+posts = posts.map((p:any) => titles.map((h:  string) => p.frontmatter[h.toLowerCase()]));
+const tableProps: object = {
+    headings: headers,
+    data: posts,
+    showFilterIcon: true,
+    noResultsLabel: "No entries found..."
+}
+
+---
+<div>
+    <DataTable headings={headers} data={posts}/>
+</div>
+
