@@ -5,7 +5,7 @@ title: 'UX Curve Method'
 year: '1996'
 categorySlug: 'evaluation'
 category: 'Evaluation'
-subcategory: 'Instructional Design'
+subcategory: 'Instructional Technology'
 author: Kujala et al
 image:
     url: ''
