@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "astro": "^5.1.7",
-    "webcoreui": "^0.10.0"
+    "webcoreui": "^0.10.1"
   },
   "devDependencies": {
     "sass-embedded": "^1.83.4"

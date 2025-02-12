@@ -28,26 +28,6 @@ html {
     margin: 1rem 0;
     font-size: 2.5rem;
   }
-  table {
-    table-layout: fixed;
-    width: 85%;
-    margin: 5%;
-    text-wrap: wrap;
-    page-break-inside: avoid;
-  }
-  td {
-    padding: 1rem;
-  }
-
-  td:nth-child(1) {
-    width: auto;
-  }
-  th:nth-child(1) {
-    width: 10%;
-  }
-  tr:nth-child(even){
-    background-color:#a5f9a1;
-  }
 
 /* nav styles */
 .hamburger {
@@ -110,4 +90,15 @@ html {
     display: none;
   }
 }
-
+/* table styles */
+tbody tr {
+    cursor: pointer;
+}
+tbody tr:hover {
+  background-color: #a5f9a1 !important;
+}
+button[data-active="true"] {
+  border-color: salmon !important;
+  color: salmon !important;
+  font-weight: bold;
+}

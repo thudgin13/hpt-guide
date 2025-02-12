@@ -1,11 +1,48 @@
 ---
+import {Tabs} from 'webcoreui/astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TheoryTableLayout from '../layouts/TheoryTableLayout.astro'
 const pageTitle = "HPT Theory Matrix"
+const items = [{
+    label: 'All Theories',
+    value: 'all',
+    active: true
+    }, 
+    {
+    label: 'Performance Analysis',
+    value: 'performance-analysis'
+    }, 
+    {label: 'Intervention Design',
+     value: 'intervention-design'
+    },
+    {
+    label: 'Intervention Selection',
+    value: 'intervention-selection'
+    },
+    {label: 'Evaluation',
+     value: 'evaluation'
+    }]
 ---
 <BaseLayout pageTitle={pageTitle}>
     <div id="theoryTable">
-        <TheoryTableLayout tableName="all" />
+        <Tabs items={items} even={true}>
+            <div data-tab="all" data-active="true">
+            <TheoryTableLayout tableName="all"/>
+            </div>
+            <div data-tab="performance-analysis">
+                <TheoryTableLayout tableName="performance-analysis"/>
+            </div>
+            <div data-tab="intervention-selection">
+                <TheoryTableLayout tableName="intervention-selection"/>
+            </div>
+            <div data-tab="intervention-design">
+                <TheoryTableLayout tableName="intervention-design"/>
+            </div>
+            <div data-tab="evaluation">
+                <TheoryTableLayout tableName="evaluation"/>
+            </div>
+        </Tabs> 
+ 
     </div>
 </BaseLayout>
 
