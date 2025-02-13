@@ -6,7 +6,6 @@ if(document.location.pathname === '/theory/') {
             cells.forEach((cell) => {
                 if(cell?.dataset.name === 'more') {
                     const slug = cell?.textContent || ''
-                    console.log("TEXT", slug)
                     window.location = `${decodeURIComponent(slug)}`
                 }
             }) 

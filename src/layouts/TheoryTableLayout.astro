@@ -21,8 +21,9 @@ const data = posts.length ? posts.map((p:any) => titles.map((h:  string) => {
 <DataTable headings={headers} 
 data={data} 
 showFilterIcon={true} 
-striped='row'
 hover={true}
 noResultsLabel="Sorry, no entries match that filter term..."
+itemsPerPage={7}
+className="theory-data"
 />
 
